@@ -22,7 +22,7 @@ func (d *Detector) DetectGit(gitCmd *sources.GitCmd) ([]report.Finding, error) {
 			}
 
 			// skip binary files
-			if gitdiffFile.IsBinary || gitdiffFile.IsDelete {
+			if gitdiffFile.IsDelete {
 				continue
 			}
 
